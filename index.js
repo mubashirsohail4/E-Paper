@@ -60,7 +60,7 @@ function srcImageSetter(src, date) {
     src[9] = src[9] + "Back_PageC010_10.jpg";
   }
 
-  for (let i = 0; i < pageCount; i++) {
+  for (let i = 0; i <= pageCount; i++) {
     document.querySelector(".pg" + (i + 1)).setAttribute("src", src[i]);
   }
 
