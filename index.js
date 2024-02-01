@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 function srcImageSetter(src, date) {
   var pageCount = 0;
   if (date.getDay() === 0) {
-    pageCount = 13;
+    pageCount = 14;
     src[0] = src[0] + "Front_Page_1.jpg";
     src[1] = src[1] + "City_Page002_2.jpg";
     src[2] = src[2] + "National_Page003_3.jpg";
@@ -47,7 +47,7 @@ function srcImageSetter(src, date) {
     src[12] = src[12] + "Sunday_Class_01_19.jpg";
     src[13] = src[13] + "Sunday_Class_02_20.jpg";
   } else {
-    pageCount = 9;
+    pageCount = 10;
     src[0] = src[0] + "Front_Page_1.jpg";
     src[1] = src[1] + "Metropolitan_PageC002_2.jpg";
     src[2] = src[2] + "NAT_INT_PageC003_3.jpg";
@@ -60,7 +60,7 @@ function srcImageSetter(src, date) {
     src[9] = src[9] + "Back_PageC010_10.jpg";
   }
 
-  for (let i = 0; i <= pageCount; i++) {
+  for (let i = 0; i < pageCount; i++) {
     document.querySelector(".pg" + (i + 1)).setAttribute("src", src[i]);
   }
 
