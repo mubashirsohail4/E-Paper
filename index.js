@@ -1,24 +1,37 @@
-const todayBtn = document.querySelector("#today");
 const paperImages = document.querySelectorAll(".paper-img");
 
-todayBtn.addEventListener("click", function () {
-  
-  const date = new Date();
-  const year = "" + date.getFullYear();
-  const month = ("0" + (date.getMonth() + 1)).slice(-2);
-  const day = "" + date.getDate();
+window.addEventListener("load", function () {
+  var localDate = new Date();
 
-  const dateFormat = year + month + day;
+  // Get the UTC time in milliseconds
+  var utcTime = localDate.getTime();
 
-  const preSrc = "https://www.express.com.pk/images/NP_KHI/";
+  // Calculate the offset for UTC+5 (Pakistan Standard Time) timezone (5 hours * 60 minutes * 60 seconds * 1000 milliseconds)
+  var utcOffset = 5 * 60 * 60 * 1000;
 
-  var src = [];
+  // Adjust the UTC time with the offset to get the time in UTC+5 timezone
+  var date = new Date(utcTime + utcOffset);
 
-  for (let i = 0; i < paperImages.length; i++) {
-    src[i] = preSrc + dateFormat + "/" + dateFormat + "-NP_KHI-";
+  if (date.getHours() < 12) {
+    date.setDate(date.getDate() - 1)
   }
 
+  const dateFormat = "/" + date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2);
+  const city = "NP_KHI";
+  const preSrc = "https://www.express.com.pk/images/" + city;
+  var currentSrc = [];
+
+  for (let i = 0; i < paperImages.length; i++) {
+    currentSrc[i] = preSrc + dateFormat + dateFormat + "-" + city + "-";
+  }
+
+  srcImageSetter(currentSrc, date);
+});
+
+function srcImageSetter(src, date) {
+  var pageCount = 0;
   if (date.getDay() === 0) {
+    pageCount = 13;
     src[0] = src[0] + "Front_Page_1.jpg";
     src[1] = src[1] + "City_Page002_2.jpg";
     src[2] = src[2] + "National_Page003_3.jpg";
@@ -34,6 +47,7 @@ todayBtn.addEventListener("click", function () {
     src[12] = src[12] + "Sunday_Class_01_19.jpg";
     src[13] = src[13] + "Sunday_Class_02_20.jpg";
   } else {
+    pageCount = 9;
     src[0] = src[0] + "Front_Page_1.jpg";
     src[1] = src[1] + "Metropolitan_PageC002_2.jpg";
     src[2] = src[2] + "NAT_INT_PageC003_3.jpg";
@@ -46,7 +60,8 @@ todayBtn.addEventListener("click", function () {
     src[9] = src[9] + "Back_PageC010_10.jpg";
   }
 
-  for (let i = 0; i < paperImages.length; i++) {
+  for (let i = 0; i < pageCount; i++) {
     document.querySelector(".pg" + (i + 1)).setAttribute("src", src[i]);
   }
-});
+
+};
