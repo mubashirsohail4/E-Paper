@@ -38,20 +38,36 @@ function srcImageSetter(date) {
   // If day is Sunday
   if (date.getDay() === 0) {
     paperPageCount = 14;
+    //Paper Source old 2-6-2024
+    // paperSrc[0] = prePaperSrc + "FRONT_PAGE_1.jpg";
+    // paperSrc[1] = prePaperSrc + "CITY_PAGE002_2.jpg";
+    // paperSrc[2] = prePaperSrc + "NATIONAL_PAGE003_3.jpg";
+    // paperSrc[3] = prePaperSrc + "CLASSIFIED_PAGE004_4.jpg";
+    // paperSrc[4] = prePaperSrc + "BAQIA_PAGE005_5.jpg";
+    // paperSrc[5] = prePaperSrc + "COMMERCE_PAGEBW_6.jpg";
+    // paperSrc[6] = prePaperSrc + "SPORTS_PAGE007_7.jpg";
+    // paperSrc[7] = prePaperSrc + "BACK_PAGE008_8.jpg";
+    // paperSrc[8] = prePaperSrc + "METROPOLITAN_PAGE009_9.jpg";
+    // paperSrc[9] = prePaperSrc + "EDITORIAL_PAGE10_10.jpg";
+    // paperSrc[10] = prePaperSrc + "OPINION_PAGE011_11.jpg";
+    // paperSrc[11] = prePaperSrc + "MAGAZINE_PAGE12_12.jpg";
+    // paperSrc[12] = prePaperSrc + "Sunday_Class_01_19.jpg";
+    // paperSrc[13] = prePaperSrc + "Sunday_Class_02_20.jpg";
+    
     paperSrc[0] = prePaperSrc + "FRONT_PAGE_1.jpg";
-    paperSrc[1] = prePaperSrc + "CITY_PAGE002_2.jpg";
-    paperSrc[2] = prePaperSrc + "NATIONAL_PAGE003_3.jpg";
-    paperSrc[3] = prePaperSrc + "CLASSIFIED_PAGE004_4.jpg";
-    paperSrc[4] = prePaperSrc + "BAQIA_PAGE005_5.jpg";
-    paperSrc[5] = prePaperSrc + "COMMERCE_PAGEBW_6.jpg";
-    paperSrc[6] = prePaperSrc + "SPORTS_PAGE007_7.jpg";
-    paperSrc[7] = prePaperSrc + "BACK_PAGE008_8.jpg";
-    paperSrc[8] = prePaperSrc + "METROPOLITAN_PAGE009_9.jpg";
-    paperSrc[9] = prePaperSrc + "EDITORIAL_PAGE10_10.jpg";
-    paperSrc[10] = prePaperSrc + "OPINION_PAGE011_11.jpg";
-    paperSrc[11] = prePaperSrc + "MAGAZINE_PAGE12_12.jpg";
-    paperSrc[12] = prePaperSrc + "Sunday_Class_01_19.jpg";
-    paperSrc[13] = prePaperSrc + "Sunday_Class_02_20.jpg";
+    paperSrc[1] = prePaperSrc + "METROPOLITAN_PAGEC002_2.JPG";
+    paperSrc[2] = prePaperSrc + "NAT_INT_PAGEC003_3.jpg";
+    paperSrc[3] = prePaperSrc + "CITY_PAGEC004_4.jpg";
+    paperSrc[4] = prePaperSrc + "BAQIA_PAGEC005_5.jpg";
+    paperSrc[5] = prePaperSrc + "EDITORIAL_PAGEC006_6.jpg";
+    paperSrc[6] = prePaperSrc + "CLASSIFIED_PAGEC007_7.jpg";
+    paperSrc[7] = prePaperSrc + "SPORTS_PAGE007_7.jpg";
+    paperSrc[8] = prePaperSrc + "MAGAZINE_PAGEC009_9.jpg";
+    paperSrc[9] = prePaperSrc + "BACK_PAGEC010_10.jpg";
+    paperSrc[10] = prePaperSrc + "EXP_SUP_01_17.jpg";
+    paperSrc[11] = prePaperSrc + "EXP_SUP_02_18.jpg";
+    paperSrc[12] = prePaperSrc + "EXP_SUP_03_19.jpg";
+    paperSrc[13] = prePaperSrc + "EXP_SUP_04_20.jpg";
   } else {
     paperPageCount = 10;
     paperSrc[0] = prePaperSrc + "FRONT_PAGE_1.jpg";
